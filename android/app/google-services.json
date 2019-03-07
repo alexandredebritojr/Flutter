@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "112038656559",
+    "firebase_url": "https://cadastrocontatosmega.firebaseio.com",
+    "project_id": "cadastrocontatosmega",
+    "storage_bucket": "cadastrocontatosmega.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112038656559:android:dbb766e6634324ad",
+        "android_client_info": {
+          "package_name": "com.example.teste_list_form"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112038656559-5bi34kodcl61nmno0rfgv2cl0bo9cgev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY6gNaYh_6gm7rP2Rfohe2IlO3yCXdU0s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
