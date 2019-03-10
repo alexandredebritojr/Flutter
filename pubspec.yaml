@@ -1,4 +1,4 @@
-name: teste_list_form
+name: app_contatos
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -24,7 +24,6 @@ dependencies:
   cupertino_icons: ^0.1.2
   validate: ^1.7.0
   cloud_firestore: ^0.9.5+2
-  auro_avatar: ^0.1.1
 
 dev_dependencies:
   flutter_test:

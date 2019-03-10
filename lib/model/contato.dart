@@ -16,10 +16,11 @@ class Contato {
   }
 
   String get id => _id;
-  String get nome => _nome;  
-  String get telefone => _telefone;   
-  String get endereco => _endereco;   
-  String get email   => _email;   
+  String get nome => _nome;
+  String get telefone => _telefone;
+  String get endereco => _endereco;
+  String get email => _email;
+  String get primeiraLetra => obterPrimeiraLetraNome(_nome);
 
   Map<String, dynamic> toMap() {
     var map = new Map<String, dynamic>();
@@ -40,5 +41,17 @@ class Contato {
     this._nome = map['nome'];
     this._telefone = map['telefone'];
     this._email = map['email'];
+  }
+
+//Método onde pega a primeira letra do nome para montar o icone na lista de contatos
+  obterPrimeiraLetraNome(String nome) {
+    String retorno = '';
+    for (int i = 0; i < nome.length; i++) {
+      if (nome[i] != ' ') {
+        retorno = nome[i];
+        break;
+      }
+    }
+    return retorno.toUpperCase();
   }
 }

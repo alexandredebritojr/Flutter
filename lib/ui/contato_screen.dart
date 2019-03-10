@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:teste_list_form/model/contato.dart';
-import 'package:teste_list_form/service/firebase_firestore_service.dart';
+import 'package:app_contatos/model/contato.dart';
+import 'package:app_contatos/service/firebase_firestore_service.dart';
 import 'package:validate/validate.dart';
-import 'package:auro_avatar/auro_avatar.dart';
 
 class ContatoScreen extends StatefulWidget {
   final Contato contato;
@@ -22,6 +21,7 @@ class _ContatoScreenState extends State<ContatoScreen> {
   bool _validateNome = false;
   bool _validateTelefone = false;
   bool _validateEmail = false;
+  String titulo = 'Adicionar Contato';
 
   @override
   void initState() {
@@ -33,30 +33,22 @@ class _ContatoScreenState extends State<ContatoScreen> {
     _telefoneController =
         new TextEditingController(text: widget.contato.telefone);
     _emailController = new TextEditingController(text: widget.contato.email);
+
+    if (widget.contato.id != null) titulo = 'Editar Contato';
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Adicionar Contato')),
+      appBar: AppBar(title: Text(titulo)),
       body: new Container(
           padding: new EdgeInsets.all(20.0),
+          color: Colors.white,
           child: new Form(
             child: new ListView(
               children: <Widget>[
-//                 new InitialNameAvatar(
-//     'John Doe',
-//     circleAvatar: true,
-//     borderColor: Colors.grey,
-//     borderSize: 4.0,
-//     backgroundColor: Colors.blue,
-//     foregroundColor: Colors.white,
-//     padding: 20.0,
-//     textSize: 30.0,
-// ),
                 new Container(
-                    width: 50.0,
-                    height: 190.0,
+                    height: 230.0,
                     decoration: new BoxDecoration(
                         shape: BoxShape.circle,
                         image: new DecorationImage(

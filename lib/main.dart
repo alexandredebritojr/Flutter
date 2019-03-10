@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teste_list_form/ui/listview_contato.dart';
+import 'package:app_contatos/ui/listview_contato.dart';
 
 void main() => runApp(new MyApp());
 
